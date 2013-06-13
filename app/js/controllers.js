@@ -2,10 +2,11 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
-
-  }])
-  .controller('MyCtrl2', [function() {
-
-  }]);
+function DocListCtrl($scope, $http) {
+	$http.get('js/_doc.json').success(function(data) {
+	    $scope.docs = data;
+	  });
+}
+function DocDetailCtrl($scope){
+	
+}

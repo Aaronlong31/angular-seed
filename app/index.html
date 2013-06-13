@@ -1,28 +1,101 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app>
 <head>
-  <meta charset="utf-8">
-  <title>My AngularJS App</title>
-  <link rel="stylesheet" href="css/app.css"/>
+  	<meta charset="utf-8">
+  	<title>Liba Api Doc</title>
+  	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	
+	
+
+	<!-- In production use:
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="js/jquery-1.8.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	-->
+	<script src="lib/angular/angular.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="js/jquery-1.8.0.min.js"></script>
+	
+	<style type="text/css">
+    hr{margin:0}
+    .get{background-color: #00cc99}
+    .post{background-color: #0099CC}
+    .put{background-color: #FFCC66}
+    .delete{background-color: #CC3366}
+    .request-method{
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .path{
+        height: 50px;
+        font-weight: bold;
+        font-family: Courier New;
+        padding-top: 10px;
+        word-wrap:break-word;
+    }
+    .description{
+        height: 50px;
+    }
+    .card{
+        margin:10px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+    }
+    a.key,a.request-method{
+        color:#000000;
+    }
+    div.request-method, div.description{
+        cursor: pointer;
+    }
+
+    .frontend{
+    }
+
+    .detail {
+        display: none;
+
+    }
+
+</style>
 </head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
+<body ng-controller="DocListCtrl">
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="#">LIBA API DOCUMENT</a>
+			<form action="" class="navbar-search pull-left">
+				<input id="search" ng-model="query" class="search-query input-xxlarge" type="text" placeholder="search path/description">
+			</form>
+		</div>
+	</div>
+</div>	
+<div></div>
+<div style="height:60px"></div>
+<div class="container-fluid">
+	<div>
+        <div class="span7 card" ng-repeat="doc in docs | filter:query">
+            <div class="row-fluid">
+                <div class="span3 request-method">{{doc.requestMethod}}</div>
+                <div class="span9 path">{{doc.path}} </div>
+                <div class="span9 description">{{doc.description}}</div>
+        	</div>
+		</div>
+	</div>
+</div>
+  <script src="js/doc.js"></script>
 </body>
 </html>

@@ -90,10 +90,4 @@ $(function() {
     }, function(){
         $(this).next().hide();
     });
-
-    if (window.location.toString().indexOf('#') > 0) {
-	    var navbar = $("a[name='" + window.location.toString().split('#')[1] + "']").parent().parent();
-	    navbar.click();
-	    $("body").animate({scrollTop:navbar.offset().top-55}, 500);
-	}
 });
