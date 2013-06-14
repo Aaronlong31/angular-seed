@@ -10,4 +10,8 @@ $(function() {
 			$(this).next().slideUp('fast');
 		}
 	});
+	if (window.location.toString().indexOf('#') > 0) {
+		$("html").scope().query = window.location.toString().split('#')[1];
+        $("html").scope().$apply();
+	}
 });

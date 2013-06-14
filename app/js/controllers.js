@@ -10,6 +10,3 @@ function DocListCtrl($scope, $http) {
 		$scope.query = key;
 	}
 }
-function DocDetailCtrl($scope){
-	
-}
