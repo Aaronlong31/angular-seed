@@ -1,1 +1,53 @@
 hr{margin:0}
+.get{background-color: #00cc99}
+.post{background-color: #0099CC}
+.put{background-color: #FFCC66}
+.delete{background-color: #CC3366}
+.get-border{border: 1px solid #00cc99}
+.post-border{border: 1px solid #0099CC}
+.put-border{border: 1px solid #FFCC66}
+.delete-border{border: 1px solid #CC3366}
+.card{
+    margin:10px 10px 0 10px;
+    height: 60px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+.request-method{
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 15px;
+    font-weight: bold;
+    weight: 100%;
+    cursor: pointer;
+}
+a.key,a.request-method{
+    color:#000000;
+}
+.path, .description, .request-method {
+	line-height: 60px;
+}
+.description {
+	font-size: 16px;
+	color: #000000;
+	float:right;
+	margin-right:10px;
+}
+.path{
+	font-family: Courier New;
+	font-weight: bold;
+	font-size: 16px;
+}
+.detail{
+	display:none;
+	margin: 0 10px 10px 10px;
+	padding: 10px;
+}

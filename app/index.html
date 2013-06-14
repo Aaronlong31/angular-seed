@@ -32,44 +32,42 @@
             </div>
         </div>  
         <div></div>
-        <div style="height:60px"></div>
+        <div style="height:40px"></div>
         <div class="container">
         <div>
             <div class="doc" ng-repeat="doc in docs | filter:query">
-                <div class="navbar">
-                    <div class="navbar-inner">
-                        <a name="{{doc.description}}" class="brand" style="width:100%">
-                            <span class="request-method btn span1">{{doc.requestMethod}}</span>
-                            <span class="path" style="line-height: 33px">{{doc.path}} </span>
-                            <span class="description" style="float:right;">{{doc.description}}</span>
-                            <span style="clear:both;"></span>
-                        </a>
-                    </div>
+                <div class="{{doc.requestMethod | lowercase}} card">
+                    <a name="{{doc.description}}" class="brand" style="width:100%">
+                        <span class="span1 request-method {{doc.requestMethod | methodStyle}}">{{doc.requestMethod}}</span>
+                        <span class="path" ng-bind-html-unsafe="doc.path | splitPath"> </span>
+                        <span class="description">{{doc.description}}</span>
+                        <span style="clear:both;"></span>
+                    </a>
                 </div>
-                <div>
+                <div class="detail {{doc.requestMethod | lowercase}}-border">
                     <h4 class="label label-info">Request Mapping</h4>
                     <hr />
                     <dl class="dl-horizontal">
-                        <dt>Method</dt>
-                        <dd>{{doc.requestMethod}}</dd>
-                        <dt>URL</dt>
-                        <dd>{{doc.path}}</dd>
-                        <dt>Description</dt>
-                        <dd>{{doc.description}}&nbsp;</dd>
-                        <dt>params</dt>
-                        <dd>{{doc.params}}</dd>
-                        <dt>Header</dt>
-                        <dd>{{doc.header}}</dd>
-                        <dt>Consume</dt>
-                        <dd>{{doc.consume}}</dd>
-                        <dt>Produce</dt>
-                        <dd>{{doc.produce}}</dd>
-                        <dt>Authorization</dt>
-                        <dd>{{doc.auth}}&nbsp;</dd>
+                        <dt ng-show="doc.requestMethod != ''">Method</dt>
+                        <dd ng-show="doc.requestMethod != ''">{{doc.requestMethod}}</dd>
+                        <dt ng-show="doc.path != ''">URL</dt>
+                        <dd ng-show="doc.path != ''">{{doc.path}}</dd>
+                        <dt ng-show="doc.description != ''">Description</dt>
+                        <dd ng-show="doc.description != ''">{{doc.description}}&nbsp;</dd>
+                        <dt ng-show="doc.params != ''">params</dt>
+                        <dd ng-show="doc.params != ''">{{doc.params}}</dd>
+                        <dt ng-show="doc.header != ''">Header</dt>
+                        <dd ng-show="doc.header != ''">{{doc.header}}</dd>
+                        <dt ng-show="doc.consume != ''">Consume</dt>
+                        <dd ng-show="doc.consume != ''">{{doc.consume}}</dd>
+                        <dt ng-show="doc.produce != ''">Produce</dt>
+                        <dd ng-show="doc.produce != ''">{{doc.produce}}</dd>
+                        <dt ng-show="doc.auth != null">Authorization</dt>
+                        <dd ng-show="doc.auth != null">{{doc.auth}}</dd>
                     </dl>
-                    <h4 class="label label-info">Parameter</h4>
-                    <hr />
-                    <dl class="dl-horizontal">
+                    <h4 class="label label-info" ng-show="doc.pageInfo || doc.paramInfos">Parameter</h4>
+                    <hr ng-show="doc.pageInfo || doc.paramInfos"/>
+                    <dl class="dl-horizontal" ng-show="doc.paramInfos">
                         <dt>Param</dt>
                         <dd>
                             <table class="table table-striped table-hover">
@@ -84,25 +82,25 @@
                             </table>
                         </dd>
                     </dl>
-                    <dl class="dl-horizontal">
+                    <dl class="dl-horizontal" ng-show="doc.pageInfo">
                         <dt>Page Param Descript</dt>
                         <dd>
                             <table class="table table-striped table-hover">
                                 <tr>
                                     <td>Default PageSize</td>
-                                    <td>{{doc.pageInfo.defaultPageSize()}}</td>
+                                    <td>{{doc.pageInfo.defaultPageSize}}</td>
                                 </tr>
                                 <tr>
                                     <td>Default Page No</td>
-                                    <td>{{doc.pageInfo.defaultPageNo()}}</td>
+                                    <td>{{doc.pageInfo.defaultPageNo}}</td>
                                 </tr>
                                 <tr>
                                     <td>Default OrderBy</td>
-                                    <td>{{doc.pageInfo.defaultOrderBy()}}</td>
+                                    <td>{{doc.pageInfo.defaultOrderBy}}</td>
                                 </tr>
                                 <tr>
                                     <td>Default OrderBy Sort</td>
-                                    <td>{{doc.pageInfo.defaultOrderSort()}}</td>
+                                    <td>{{doc.pageInfo.defaultOrderSort}}</td>
                                 </tr>
                                 <tr>
                                     <td>Supported OrderBy</td>
@@ -114,7 +112,7 @@
                                 </tr>
                                 <tr>
                                     <td>Max PageSize</td>
-                                    <td>{{doc.pageInfo.maxPageSize() }}</td>
+                                    <td>{{doc.pageInfo.maxPageSize}}</td>
                                 </tr>
                             </table>
                         </dd>
@@ -124,8 +122,8 @@
                     <dl class="dl-horizontal">
                         <dt>SuccessStatus</dt>
                         <dd>{{doc.successStatus}}</dd>
-                        <dt>Exception</dt>
-                        <dd>
+                        <dt ng-show="doc.exceptionInfos">Exception</dt>
+                        <dd ng-show="doc.exceptionInfos">
                             <table class="table table-striped table-hover">
                                 <tr>
                                     <th>Exception Name</th>
