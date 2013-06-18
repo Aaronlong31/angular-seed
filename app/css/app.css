@@ -27,10 +27,9 @@ hr{margin:0}
     font-size: 15px;
     font-weight: bold;
     weight: 100%;
-    cursor: pointer;
 }
-a.key,a.request-method{
-    color:#000000;
+span.keyword,.request-method{
+    cursor: pointer;
 }
 .path, .description, .request-method {
 	line-height: 60px;

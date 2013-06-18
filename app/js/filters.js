@@ -17,12 +17,6 @@ angular.module('docFilters', []).filter('methodStyle', function(){
 	}
 }).filter('splitPath', function() {
 	return function(input, scope) {
-        var ss = input.replace(/\[|\]|\s+/g, '').split('/');
-        var pathHtml = "";
-        $.each(ss,function(){
-            if(this!='')
-                pathHtml += "/<a href='javascript:void(0);' class='key'>" + this + "</a>";
-        });
-        return pathHtml;
+        return input.replace(/\[|\]|\s+/g, '').split('/').slice(1);
 	}
 });

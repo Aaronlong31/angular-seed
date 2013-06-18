@@ -37,12 +37,14 @@
         <div>
             <div class="doc" ng-repeat="doc in docs | filter:query">
                 <div class="{{doc.requestMethod | lowercase}} card">
-                    <a name="{{doc.description}}" class="brand" style="width:100%">
-                        <span class="span1 request-method {{doc.requestMethod | methodStyle}}">{{doc.requestMethod}}</span>
-                        <span class="path" ng-bind-html-unsafe="doc.path | splitPath"> </span>
-                        <span class="description">{{doc.description}}</span>
-                        <span style="clear:both;"></span>
-                    </a>
+                    <span class="span1 request-method {{doc.requestMethod | methodStyle}}" ng-click="filterKeyword(doc.requestMethod, $event)">{{doc.requestMethod}}</span>
+                    <span class="path">
+                        <span class="keyword" ng-repeat="keyword in doc.path | splitPath" ng-click="filterKeyword(keyword, $event)">
+                            /{{keyword}}
+                        </span>
+                    </span>
+                    <span class="description">{{doc.description}}</span>
+                    <span style="clear:both;"></span>
                 </div>
                 <div class="detail {{doc.requestMethod | lowercase}}-border">
                     <h4 class="label label-info">Request Mapping</h4>
