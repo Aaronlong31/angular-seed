@@ -25,4 +25,12 @@ angular.module('docFilters', []).filter('methodStyle', function(){
         });
         return pathHtml;
 	}
+}).filter('classToPath', function() {
+	return function(input, scope) {
+		return input.replace(/\./g, '/');
+	}
+}).filter('first', function(){
+	return function(input, scope) {
+		return input.split(/\s+/)[0];
+	}
 });

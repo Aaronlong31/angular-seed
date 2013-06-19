@@ -9,6 +9,7 @@
         "auth": "addBadKeyword",
         "params": "",
         "method": "BadKeywordController.addBadKeyword(BadKeywordController$BadKeywordForm)",
+        "controller": "com.liba.api.badkeyword.BadKeywordController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -78,6 +79,7 @@
         "auth": null,
         "params": "_service=test",
         "method": "BadKeywordController.testTitle(String)",
+        "controller": "com.liba.api.badkeyword.BadKeywordController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -93,6 +95,7 @@
         "auth": "reloadBadKeyword",
         "params": "_service=reload",
         "method": "BadKeywordController.reload()",
+        "controller": "com.liba.api.badkeyword.BadKeywordController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -108,6 +111,7 @@
         "auth": "deleteBadKeyword",
         "params": "",
         "method": "BadKeywordController.deleteBadKeyword(String)",
+        "controller": "com.liba.api.badkeyword.BadKeywordController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -123,6 +127,7 @@
         "auth": "updateBadKeyword",
         "params": "",
         "method": "BadKeywordController.updateBadKeyword(String,int)",
+        "controller": "com.liba.api.badkeyword.BadKeywordController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -144,6 +149,7 @@
         "auth": "banIp",
         "params": "ip && startTime && endTime",
         "method": "BanIpController.banIp(BanIpForm)",
+        "controller": "com.liba.api.bbsservice.topic.ban.BanIpController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -204,6 +210,7 @@
         "auth": "createBanMobile",
         "params": "",
         "method": "BanMobileController.create(String)",
+        "controller": "com.liba.api.banmobile.BanMobileController",
         "successStatus": "201",
         "pageInfo": null,
         "paramInfos": [],
@@ -227,6 +234,7 @@
         "auth": "findForumsByIds",
         "params": "",
         "method": "QueryForumController.findByIds(Integer[])",
+        "controller": "com.liba.api.bbsservice.forum.query.QueryForumController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -248,6 +256,7 @@
         "auth": "createForum",
         "params": "",
         "method": "CreateForumController.createForum(CreateForumForm)",
+        "controller": "com.liba.api.bbsservice.forum.create.CreateForumController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -282,6 +291,7 @@
         "auth": "findTagsByForumIds",
         "params": "",
         "method": "QueryTagController.queryByForumIds(Integer[])",
+        "controller": "com.liba.api.bbsservice.tag.query.QueryTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -303,6 +313,7 @@
         "auth": "findTagByForumId",
         "params": "",
         "method": "QueryTagController.query(int,Long[])",
+        "controller": "com.liba.api.bbsservice.tag.query.QueryTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -324,6 +335,7 @@
         "auth": "createTag",
         "params": "",
         "method": "CreateTagController.create(int,String)",
+        "controller": "com.liba.api.bbsservice.tag.create.CreateTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -353,6 +365,7 @@
         "auth": "deleteTag",
         "params": "",
         "method": "DeleteTagController.deleteTagByForumIdAndTagId(int,long)",
+        "controller": "com.liba.api.bbsservice.tag.delete.DeleteTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -368,6 +381,7 @@
         "auth": "updateTagName",
         "params": "",
         "method": "UpdateTagController.updateTagName(int,int,String)",
+        "controller": "com.liba.api.bbsservice.tag.update.UpdateTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -397,6 +411,7 @@
         "auth": "findTopicsByForumIdAndTagId",
         "params": "",
         "method": "FindTopicController.findByForumAndTagId(int,long,Page)",
+        "controller": "com.liba.api.bbsservice.topic.find.FindTopicController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 40,
@@ -443,6 +458,7 @@
         "auth": "findTopicsByForumId",
         "params": "!tagId",
         "method": "FindTopicController.findByForumId(int,Page)",
+        "controller": "com.liba.api.bbsservice.topic.find.FindTopicController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 40,
@@ -500,6 +516,7 @@
         "auth": "findTopicsByForumIdAndTagIds",
         "params": "tagId",
         "method": "FindTopicController.findByForumIdAndTagIds(int,Long[],Page)",
+        "controller": "com.liba.api.bbsservice.topic.find.FindTopicController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 40,
@@ -560,6 +577,7 @@
         "auth": "findTopicsByForumId",
         "params": "_start",
         "method": "FindTopicController.findTopicIdsByForumIdUseQuerySlice(int,QuerySlice)",
+        "controller": "com.liba.api.bbsservice.topic.find.FindTopicController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -575,6 +593,7 @@
         "auth": "findForumById",
         "params": "",
         "method": "QueryForumController.findById(int)",
+        "controller": "com.liba.api.bbsservice.forum.query.QueryForumController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -590,6 +609,7 @@
         "auth": "updateForum",
         "params": "",
         "method": "UpdateForumController.update(int,String,ForumAccessRule)",
+        "controller": "com.liba.api.bbsservice.forum.update.UpdateForumController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -616,6 +636,7 @@
         "auth": "createMobileVerification",
         "params": "!_service",
         "method": "CreateMobileVerificationController.createVerification(CreateMobileVerificationForm)",
+        "controller": "com.liba.api.mobileverification.create.CreateMobileVerificationController",
         "successStatus": "201",
         "pageInfo": null,
         "paramInfos": [
@@ -706,6 +727,7 @@
         "auth": "checkMobileVerification",
         "params": "_service=verify",
         "method": "CheckMobileVerificationController.verify(int,String,String)",
+        "controller": "com.liba.api.mobileverification.verify.CheckMobileVerificationController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -764,6 +786,7 @@
         "auth": null,
         "params": "",
         "method": "GetStatisticsController.findAll(long)",
+        "controller": "com.liba.monitor.GetStatisticsController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -779,6 +802,7 @@
         "auth": null,
         "params": "",
         "method": "GetStatisticsController.findById(String,long)",
+        "controller": "com.liba.monitor.GetStatisticsController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -794,6 +818,7 @@
         "auth": "loginByOpenId",
         "params": "",
         "method": "LoginByOpenIdController.login(LoginByOpenIdController$Form)",
+        "controller": "com.liba.api.openidsession.LoginByOpenIdController",
         "successStatus": "201",
         "pageInfo": null,
         "paramInfos": [
@@ -904,6 +929,7 @@
         "auth": "bindOpenIdToUser",
         "params": "_service=bindLoginUser",
         "method": "BindUserOpenIdController.bindLoginUserByCodeAndUserId(String,long,String,String)",
+        "controller": "com.liba.api.openidsession.BindUserOpenIdController",
         "successStatus": "201",
         "pageInfo": null,
         "paramInfos": [],
@@ -934,6 +960,7 @@
         "auth": "getAccessToken",
         "params": "userId && providerName",
         "method": "GetAccessTokenController.getAccessTokenByUserIdAndProviderName(long,String)",
+        "controller": "com.liba.api.openidsession.GetAccessTokenController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -960,6 +987,7 @@
         "auth": "getAccessToken",
         "params": "",
         "method": "GetAccessTokenController.getAccessToken(long)",
+        "controller": "com.liba.api.openidsession.GetAccessTokenController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -975,6 +1003,7 @@
         "auth": "getAllOAuthUrls",
         "params": "",
         "method": "UserAuthURLController.getALLUserAuthURLs(String)",
+        "controller": "com.liba.api.openidsession.UserAuthURLController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -996,6 +1025,7 @@
         "auth": "getOneOAuthUrls",
         "params": "",
         "method": "UserAuthURLController.getUserAuthURL(String,String)",
+        "controller": "com.liba.api.openidsession.UserAuthURLController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -1025,6 +1055,7 @@
         "auth": "bindOpenIdToUserAndLogin",
         "params": "_service=bind",
         "method": "BindingUserAndLoginController.bindUserAndLogin(long,BindingUserAndLoginController$Form)",
+        "controller": "com.liba.api.openidsession.BindingUserAndLoginController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -1139,6 +1170,7 @@
         "auth": "registerUserAndBindAndLogin",
         "params": "_service=register",
         "method": "RegisterUserAndLoginController.registerUserAndLogin(long,RegisterUserAndLoginController$Form)",
+        "controller": "com.liba.api.openidsession.RegisterUserAndLoginController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -1255,6 +1287,7 @@
         "auth": "recoverReply",
         "params": "",
         "method": "RecoverReplyController.recover(Long[])",
+        "controller": "com.liba.api.bbsservice.reply.recover.RecoverReplyController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -1276,6 +1309,7 @@
         "auth": "recoverTopic",
         "params": "",
         "method": "RecoverTopicController.recover(Long[],TopicAccessRule)",
+        "controller": "com.liba.api.bbsservice.topic.RecoverTopicController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -1302,6 +1336,7 @@
         "auth": "findReplyById",
         "params": "",
         "method": "FindReplyController.findById(long)",
+        "controller": "com.liba.api.bbsservice.reply.find.FindReplyController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -1325,6 +1360,7 @@
         "auth": "findSessionByUserId",
         "params": "userId",
         "method": "FindSessionController.findByUserId(Long)",
+        "controller": "com.liba.api.session.FindSessionController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -1340,6 +1376,7 @@
         "auth": "findSessionByIp",
         "params": "ip",
         "method": "FindSessionController.findByIp(String)",
+        "controller": "com.liba.api.session.FindSessionController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -1355,6 +1392,7 @@
         "auth": "countRecentLoginUsers",
         "params": "_service=countUsers",
         "method": "StatisticsServiceController.countUserId(int)",
+        "controller": "com.liba.api.session.StatisticsServiceController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -1376,6 +1414,7 @@
         "auth": "countRecentSessions",
         "params": "_service=countSessions",
         "method": "StatisticsServiceController.countSessions(int)",
+        "controller": "com.liba.api.session.StatisticsServiceController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -1397,6 +1436,7 @@
         "auth": "loginUser",
         "params": "",
         "method": "LoginController.login(LoginForm)",
+        "controller": "com.liba.api.session.LoginController",
         "successStatus": "201",
         "pageInfo": null,
         "paramInfos": [
@@ -1504,6 +1544,7 @@
         "auth": null,
         "params": "",
         "method": "FindSessionController.findById(String)",
+        "controller": "com.liba.api.session.FindSessionController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -1519,6 +1560,7 @@
         "auth": "logoutUser",
         "params": "",
         "method": "LogoutController.logout(String)",
+        "controller": "com.liba.api.session.LogoutController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -1534,6 +1576,7 @@
         "auth": "loginUserByOldMobile",
         "params": "",
         "method": "LoginController.loginFromOldMobile(LoginForm,String)",
+        "controller": "com.liba.api.session.LoginController",
         "successStatus": "201",
         "pageInfo": null,
         "paramInfos": [
@@ -1641,6 +1684,7 @@
         "auth": "updateSessionLastVisitTime",
         "params": "",
         "method": "UpdateLastVisitTimeController.update(String)",
+        "controller": "com.liba.api.session.UpdateLastVisitTimeController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -1656,6 +1700,7 @@
         "auth": "deleteTag",
         "params": "",
         "method": "DeleteTagController.deleteTagByTagId(long)",
+        "controller": "com.liba.api.bbsservice.tag.delete.DeleteTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -1671,6 +1716,7 @@
         "auth": "findTopicsByForumIdAndTagId",
         "params": "",
         "method": "FindTopicController.findByTagId(long,Page)",
+        "controller": "com.liba.api.bbsservice.topic.find.FindTopicController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 40,
@@ -1717,6 +1763,7 @@
         "auth": "findTopicsByForumIdAndTagId",
         "params": "_start",
         "method": "FindTopicController.findByTagIdUseSlice(long,QuerySlice)",
+        "controller": "com.liba.api.bbsservice.topic.find.FindTopicController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -1732,6 +1779,7 @@
         "auth": "findTopicsByIds",
         "params": "id",
         "method": "FindTopicController.findByIds(Long[],Page)",
+        "controller": "com.liba.api.bbsservice.topic.find.FindTopicController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 40,
@@ -1783,6 +1831,7 @@
         "auth": "createTopic",
         "params": "",
         "method": "CreateTopicController.create(CreateTopicForm)",
+        "controller": "com.liba.api.bbsservice.topic.create.CreateTopicController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -1924,6 +1973,7 @@
         "auth": "findTopicById",
         "params": "",
         "method": "FindTopicController.findById(long)",
+        "controller": "com.liba.api.bbsservice.topic.find.FindTopicController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -1947,6 +1997,7 @@
         "auth": "updateTopicTitle",
         "params": "_service=updateTitle",
         "method": "UpdateTopicController.updateTitle(long,String)",
+        "controller": "com.liba.api.bbsservice.topic.update.UpdateTopicController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -1968,6 +2019,7 @@
         "auth": "moveTopic",
         "params": "_service=move",
         "method": "UpdateTopicController.move(long,int)",
+        "controller": "com.liba.api.bbsservice.topic.update.UpdateTopicController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -1989,6 +2041,7 @@
         "auth": "updateTopicAccessRule",
         "params": "",
         "method": "UpdateTopicAccessRuleController.updateAccessRuleById(long,TopicAccessRule)",
+        "controller": "com.liba.api.bbsservice.topic.update.UpdateTopicAccessRuleController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -2010,6 +2063,7 @@
         "auth": "updateTopicClickTimes",
         "params": "",
         "method": "UpdateTopicController.updateClickTimes(long,int)",
+        "controller": "com.liba.api.bbsservice.topic.update.UpdateTopicController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -2031,6 +2085,7 @@
         "auth": "findTopicContent",
         "params": "",
         "method": "FindTopicController.findTopicContent(long)",
+        "controller": "com.liba.api.bbsservice.topic.find.FindTopicController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2054,6 +2109,7 @@
         "auth": null,
         "params": "",
         "method": "RepairTopicFloorController.updateFloor(long,boolean)",
+        "controller": "com.liba.api.bbsservice.topic.repairfloor.RepairTopicFloorController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -2090,6 +2146,7 @@
         "auth": "findRepliesByTopicId",
         "params": "",
         "method": "FindReplyController.findByTopicId(long,Page)",
+        "controller": "com.liba.api.bbsservice.reply.find.FindReplyController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,
@@ -2143,6 +2200,7 @@
         "auth": "findRepliesByTopicIdAndReplierId",
         "params": "replierId",
         "method": "FindReplyController.findByTopicAndReplierId(long,long,Page)",
+        "controller": "com.liba.api.bbsservice.reply.find.FindReplyController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,
@@ -2193,6 +2251,7 @@
         "auth": "createReply",
         "params": "",
         "method": "CreateReplyController.create(CreateReplyForm,long)",
+        "controller": "com.liba.api.bbsservice.reply.create.CreateReplyController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -2298,6 +2357,7 @@
         "auth": "findReplyById",
         "params": "",
         "method": "FindReplyController.findByTopicIdAndReplyId(long,long)",
+        "controller": "com.liba.api.bbsservice.reply.find.FindReplyController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2321,6 +2381,7 @@
         "auth": "deleteReply",
         "params": "",
         "method": "UpdateReplyController.deleteReply(long,long)",
+        "controller": "com.liba.api.bbsservice.reply.update.UpdateReplyController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2336,6 +2397,7 @@
         "auth": "updateReplyContent",
         "params": "",
         "method": "UpdateReplyController.updateContent(long,long,String,long)",
+        "controller": "com.liba.api.bbsservice.reply.update.UpdateReplyController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -2391,6 +2453,7 @@
         "auth": "updateReplyAttachId",
         "params": "_service=updateAttachId",
         "method": "UpdateReplyController.updateAttachId(long,long,long)",
+        "controller": "com.liba.api.bbsservice.reply.update.UpdateReplyController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [
@@ -2420,6 +2483,7 @@
         "auth": "findTagsByTopicId",
         "params": "",
         "method": "QueryTagController.queryByTopicId(long)",
+        "controller": "com.liba.api.bbsservice.tag.query.QueryTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2435,6 +2499,7 @@
         "auth": "removeTopicTag",
         "params": "",
         "method": "MarkTagController.unMark(long,long)",
+        "controller": "com.liba.api.bbsservice.tag.mark.MarkTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2450,6 +2515,7 @@
         "auth": "postTopicTag",
         "params": "",
         "method": "MarkTagController.mark(long,long)",
+        "controller": "com.liba.api.bbsservice.tag.mark.MarkTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2480,6 +2546,7 @@
         "auth": "registerUser",
         "params": "!_service",
         "method": "RegisterUserController.register(UserRegisterForm)",
+        "controller": "com.liba.api.user.register.RegisterUserController",
         "successStatus": "201",
         "pageInfo": null,
         "paramInfos": [
@@ -2585,6 +2652,7 @@
         "auth": null,
         "params": "name && password",
         "method": "FindUserController.findByNameAndPassword(String,String)",
+        "controller": "com.liba.api.user.FindUserController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2600,6 +2668,7 @@
         "auth": "findUserByMobile",
         "params": "mobile",
         "method": "FindUserController.findSimpleUsersByMobile(String)",
+        "controller": "com.liba.api.user.FindUserController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2615,6 +2684,7 @@
         "auth": "findUserByEmail",
         "params": "email",
         "method": "FindUserController.findSimpleUsersByEmail(String)",
+        "controller": "com.liba.api.user.FindUserController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2630,6 +2700,7 @@
         "auth": "findUserByNameLike",
         "params": "nameLike",
         "method": "FindUserController.findSimpleUsersByNameLike(String,Page)",
+        "controller": "com.liba.api.user.FindUserController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,
@@ -2673,6 +2744,7 @@
         "auth": "findUserByRegisterTimeBetween",
         "params": "registerTimeStart && registerTimeEnd",
         "method": "FindUserController.findSimpleUsersByRegisterTimeBetween(int,int,Page)",
+        "controller": "com.liba.api.user.FindUserController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,
@@ -2718,6 +2790,7 @@
         "auth": null,
         "params": "name && !password",
         "method": "FindUserController.findByName(String)",
+        "controller": "com.liba.api.user.FindUserController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2726,13 +2799,14 @@
     {
         "requestMethod": "POST",
         "path": "/user",
-        "description": "查找与指定会员有相同密码的会员",
+        "description": "查找与指定会员有相同注册ip的会员",
         "header": "",
         "consume": "",
         "produce": "application/json;charset=utf-8",
-        "auth": "findUserOfSamePassword",
-        "params": "_service=findSamePassword && userId",
-        "method": "SpecialUserQueryController.findSimpleUsersOfSamePassword(long,Page)",
+        "auth": "findUserOfSameIp",
+        "params": "_service=findSameIp && userId",
+        "method": "SpecialUserQueryController.findSimpleUsersBySameIp(long,Page)",
+        "controller": "com.liba.api.user.SpecialUserQueryController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,
@@ -2769,13 +2843,14 @@
     {
         "requestMethod": "POST",
         "path": "/user",
-        "description": "查找与指定会员有相同注册ip的会员",
+        "description": "查找与指定会员有相同密码的会员",
         "header": "",
         "consume": "",
         "produce": "application/json;charset=utf-8",
-        "auth": "findUserOfSameIp",
-        "params": "_service=findSameIp && userId",
-        "method": "SpecialUserQueryController.findSimpleUsersBySameIp(long,Page)",
+        "auth": "findUserOfSamePassword",
+        "params": "_service=findSamePassword && userId",
+        "method": "SpecialUserQueryController.findSimpleUsersOfSamePassword(long,Page)",
+        "controller": "com.liba.api.user.SpecialUserQueryController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,
@@ -2819,6 +2894,7 @@
         "auth": "findUserOfSamePasswordAndIp",
         "params": "_service=findSamePasswordAndIp && userId",
         "method": "SpecialUserQueryController.findSimpleUsersOfSamePasswordAndIp(long,Page)",
+        "controller": "com.liba.api.user.SpecialUserQueryController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,
@@ -2862,6 +2938,7 @@
         "auth": null,
         "params": "",
         "method": "FindUserController.findById(Long)",
+        "controller": "com.liba.api.user.FindUserController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2877,6 +2954,7 @@
         "auth": "updateUserPassword",
         "params": "password",
         "method": "UpdateUserPasswordController.updatePassword(Long,String)",
+        "controller": "com.liba.api.user.UpdateUserPasswordController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -2892,6 +2970,7 @@
         "auth": "getUserContact",
         "params": "",
         "method": "GetUserContactController.findUserContactById(Long)",
+        "controller": "com.liba.api.user.contact.GetUserContactController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -2907,6 +2986,7 @@
         "auth": "updateUserContact",
         "params": "",
         "method": "UpdateUserContactController.updateUserContact(long,UpdateUserContactForm)",
+        "controller": "com.liba.api.user.contact.UpdateUserContactController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -2948,6 +3028,7 @@
         "auth": "updateUserArea",
         "params": "province && city && district",
         "method": "UpdateUserAreaController.updateUserArea(long,Area)",
+        "controller": "com.liba.api.user.UpdateUserAreaController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -3001,6 +3082,7 @@
         "auth": "updateUserScore",
         "params": "score",
         "method": "UpdateUserScoreController.updateUserScore(long,int)",
+        "controller": "com.liba.api.user.UpdateUserScoreController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -3016,6 +3098,7 @@
         "auth": "updateGender",
         "params": "gender",
         "method": "UpdateUserGenderController.updateGender(long,Gender)",
+        "controller": "com.liba.api.user.UpdateUserGenderController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -3031,6 +3114,7 @@
         "auth": "updateUserTitle",
         "params": "title",
         "method": "UpdateUserTitleController.updateUserTitle(long,String)",
+        "controller": "com.liba.api.user.UpdateUserTitleController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -3046,6 +3130,7 @@
         "auth": "updateUserSignature",
         "params": "signature",
         "method": "UpdateUserSignatureController.updateUserSignature(long,String)",
+        "controller": "com.liba.api.user.UpdateUserSignatureController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -3061,6 +3146,7 @@
         "auth": "updateUserBlockStatus",
         "params": "blocked",
         "method": "UpdateUserBlockStatusController.updateUserBlock(long,boolean)",
+        "controller": "com.liba.api.user.UpdateUserBlockStatusController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -3076,6 +3162,7 @@
         "auth": "findRepliedTopicsByUser",
         "params": "",
         "method": "FindUserTopicsController.findReplied(Long,Page)",
+        "controller": "com.liba.api.bbsservice.usertopic.FindUserTopicsController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,
@@ -3112,6 +3199,36 @@
         "exceptionInfos": []
     },
     {
+        "requestMethod": "DELETE",
+        "path": "/user/{userId}/favoriteTag",
+        "description": "批量取消会员关注标签",
+        "header": "",
+        "consume": "",
+        "produce": "",
+        "auth": "deleteUserFavoriteTags",
+        "params": "_service=batchDelete",
+        "method": "FavoriteTagController.batchDelete(long,long[])",
+        "controller": "com.liba.api.bbsservice.userfavoritetag.FavoriteTagController",
+        "successStatus": "204",
+        "pageInfo": null,
+        "paramInfos": [
+            {
+                "name": "tagId",
+                "type": null,
+                "required": true
+            }
+        ],
+        "exceptionInfos": [
+            {
+                "clazz": "com.liba.api.bbsservice.topic.create.UserNotExistException",
+                "name": "UserNotExistException",
+                "httpStatus": 404,
+                "code": 404,
+                "message": "USER_NOT_FOUND"
+            }
+        ]
+    },
+    {
         "requestMethod": "POST",
         "path": "/user/{userId}/favoriteTag",
         "description": "批量新增会员关注标签",
@@ -3121,6 +3238,7 @@
         "auth": "createUserFavoriteTags",
         "params": "_service=batchAdd",
         "method": "FavoriteTagController.batchAdd(long,long[])",
+        "controller": "com.liba.api.bbsservice.userfavoritetag.FavoriteTagController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -3148,35 +3266,6 @@
         ]
     },
     {
-        "requestMethod": "DELETE",
-        "path": "/user/{userId}/favoriteTag",
-        "description": "批量取消会员关注标签",
-        "header": "",
-        "consume": "",
-        "produce": "",
-        "auth": "deleteUserFavoriteTags",
-        "params": "_service=batchDelete",
-        "method": "FavoriteTagController.batchDelete(long,long[])",
-        "successStatus": "204",
-        "pageInfo": null,
-        "paramInfos": [
-            {
-                "name": "tagId",
-                "type": null,
-                "required": true
-            }
-        ],
-        "exceptionInfos": [
-            {
-                "clazz": "com.liba.api.bbsservice.topic.create.UserNotExistException",
-                "name": "UserNotExistException",
-                "httpStatus": 404,
-                "code": 404,
-                "message": "USER_NOT_FOUND"
-            }
-        ]
-    },
-    {
         "requestMethod": "POST",
         "path": "/user/{userId}/favoriteTag",
         "description": "新增会员关注标签",
@@ -3186,6 +3275,7 @@
         "auth": "createUserFavoriteTag",
         "params": "",
         "method": "FavoriteTagController.add(long,long)",
+        "controller": "com.liba.api.bbsservice.userfavoritetag.FavoriteTagController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [
@@ -3222,6 +3312,7 @@
         "auth": "findUserFavoriteTagsByUserId",
         "params": "",
         "method": "FavoriteTagController.getAll(long)",
+        "controller": "com.liba.api.bbsservice.userfavoritetag.FavoriteTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -3245,6 +3336,7 @@
         "auth": "findUserFavoriteTagByUserIdAndTagId",
         "params": "",
         "method": "FavoriteTagController.get(long,long)",
+        "controller": "com.liba.api.bbsservice.userfavoritetag.FavoriteTagController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -3260,6 +3352,7 @@
         "auth": "deleteUserFavoriteTag",
         "params": "",
         "method": "FavoriteTagController.delete(long,long)",
+        "controller": "com.liba.api.bbsservice.userfavoritetag.FavoriteTagController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -3283,6 +3376,7 @@
         "auth": "findOpenIdByUserId",
         "params": "",
         "method": "FindOpenIdBindingByUserController.findByUser(long)",
+        "controller": "com.liba.api.openidsession.FindOpenIdBindingByUserController",
         "successStatus": "200",
         "pageInfo": null,
         "paramInfos": [],
@@ -3298,6 +3392,7 @@
         "auth": "unbindUserOpenId",
         "params": "",
         "method": "UnbindOpenIdController.deleteOpenIdBinding(long,String)",
+        "controller": "com.liba.api.openidsession.UnbindOpenIdController",
         "successStatus": "204",
         "pageInfo": null,
         "paramInfos": [],
@@ -3321,6 +3416,7 @@
         "auth": "findPostTopicsByUser",
         "params": "",
         "method": "FindUserTopicsController.findPost(Long,Page)",
+        "controller": "com.liba.api.bbsservice.usertopic.FindUserTopicsController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,
@@ -3366,6 +3462,7 @@
         "auth": "findTopicStreamByUserId",
         "params": "",
         "method": "FindTopicStreamController.findStreamByUserId(long,Page)",
+        "controller": "com.liba.api.bbsservice.topicstream.FindTopicStreamController",
         "successStatus": "200",
         "pageInfo": {
             "defaultPageSize": 10,

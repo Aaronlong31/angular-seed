@@ -5,14 +5,14 @@
         <title>
             Liba Api Doc
         </title>
-        <link href="css/bootstrap.css" rel="stylesheet" media="screen" type="text/css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
         <!-- In production use: <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <script src="js/jquery-1.8.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     -->
         <link rel="stylesheet" href="css/app.css" type="text/css">
         <script src="js/jquery-1.8.0.min.js" type="text/javascript"> </script>
-        <script src="lib/angular/angular.js" type="text/javascript"> </script>
+        <script src="lib/angular/angular.min.js" type="text/javascript"> </script>
         <script src="js/app.js" type="text/javascript"> </script>
         <script src="js/services.js" type="text/javascript"> </script>
         <script src="js/controllers.js" type="text/javascript"> </script>
@@ -44,7 +44,7 @@
                         <span style="clear:both;"></span>
                     </a>
                 </div>
-                <div class="detail {{doc.requestMethod | lowercase}}-border">
+                <div class="detail {{doc.requestMethod | lowercase | first}}-border">
                     <h4 class="label label-info">Request Mapping</h4>
                     <hr />
                     <dl class="dl-horizontal">
@@ -143,7 +143,7 @@
                     <dl>
                         <dt>Method</dt>
                         <dd>
-                            <pre class="prettyprint java-method">{{doc.method}}</pre>
+                            <pre class="prettyprint java-method"><a ng-href="http://gitlab.liba.net/api/tree/master/src/main/java/{{doc.controller | classToPath}}.java" target="_blank">{{doc.method}}</a></pre>
                         </dd>
                     </dl>
                 </div>
